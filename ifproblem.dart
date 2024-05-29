@@ -36,6 +36,10 @@ void main(){
         num = int.parse(stdin.readLineSync()!);
         questionFive(num);
 
+      case 6:
+        print('Please Enter the String: ');
+        String? input =stdin.readLineSync();
+        questionSix(input!);
 
       case 0:
        exit(0);
@@ -112,5 +116,14 @@ void questionFive(int num){
     print('$num is in The Range of 1 To 100 !');
   }else{
     print('$num is out of Range');
+  }
+}
+
+void questionSix(String input){
+
+  if(input.isEmpty==true){
+    print('String Is Empty!!');
+  }else{
+    print('String is not Empty!!');
   }
 }
