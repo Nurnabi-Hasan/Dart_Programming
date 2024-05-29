@@ -1,23 +1,24 @@
 import 'dart:io';
 
 void main(){
+  List<String> myChar=['A','E','I','O','U'];
+  while(true) {
+    menu();
+    int userChoice;
+    print('Enter your Choice: ');
+    userChoice = int.parse(stdin.readLineSync()!);
+    int num;
 
-  menu();
-  int userChoice;
-  print('Enter your Choice: ');
-  userChoice=int.parse(stdin.readLineSync()!);
-  int num;
-
-    switch(userChoice){
+    switch (userChoice) {
       case 1:
         print('Please Enter the Number: ');
-        num=int.parse(stdin.readLineSync()!);
-          questionOne(num);
-          break;
+        num = int.parse(stdin.readLineSync()!);
+        questionOne(num);
+        break;
 
       case 2:
         print('Please Enter the Number: ');
-        num=int.parse(stdin.readLineSync()!);
+        num = int.parse(stdin.readLineSync()!);
         questionTwo(num);
         break;
 
@@ -28,12 +29,23 @@ void main(){
       case 4:
         print('Please Enter the Character: ');
         String? input = stdin.readLineSync();
-        questionFour(input!);
-        break;
+        questionFour(input!,myChar);
+
+      case 5:
+        print('Please Enter the Number: ');
+        num = int.parse(stdin.readLineSync()!);
+        questionFive(num);
+
+
+      case 0:
+       exit(0);
+
+      case 11:
+        print('Invalid Input!!!!!!!! ');
+         break;
 
     }
-
-
+  }
 
 
 
@@ -81,9 +93,7 @@ void questionThree(){
   print('Working on System Update');
 }
 
-void questionFour(String input){
-
-  List<String> myChar=['A','E','I','O','U'];
+void questionFour(String input, List<String> myChar){
 
   for(int i=0; i<=myChar.length; i++){
     if(myChar[i].toLowerCase()==input.toLowerCase()){
@@ -94,5 +104,13 @@ void questionFour(String input){
       print("$input is not a  Vowel");
       break;
     }
+  }
+}
+
+void questionFive(int num){
+  if(num>0 && num<=100){
+    print('$num is in The Range of 1 To 100 !');
+  }else{
+    print('$num is out of Range');
   }
 }
