@@ -41,6 +41,26 @@ void main(){
         String? input =stdin.readLineSync();
         questionSix(input!);
 
+      case 7:
+        print('Please Enter the Number: ');
+        num =int.parse(stdin.readLineSync()!);
+        questionSeven(num);
+
+      case 8:
+        print('Please Enter the String: ');
+        String? str =stdin.readLineSync();
+        questionEight(str!);
+
+      case 9:
+      print('Please Enter the Temperature: ');
+      int? temp =int.parse(stdin.readLineSync()!);
+      questionNine(temp);
+
+      case 10:
+        print('Please Enter the Time: ');
+        int? time =int.parse(stdin.readLineSync()!);
+        questionTen(time);
+
       case 0:
        exit(0);
 
@@ -127,3 +147,74 @@ void questionSix(String input){
     print('String is not Empty!!');
   }
 }
+
+void questionSeven(int num){
+
+  if(num%3==0 && num%5==0){
+    print('The Given Number is Multiple of 3 and 5');
+  }
+  else if(num%3==0){
+    print('The Given Number is Multiple of 3 but not 5');
+  }
+  else if(num%5==0){
+    print('The Given Number is not Multiple of 3 but 5');
+  }
+  else{
+    print('The Given Number is not Multiple of 3 and 5');
+  }
+}
+
+void questionEight(String str){
+
+  if(str.length==10){
+    print('Length of str is 10');
+  }else if(str.length<10){
+    print('Length of str is Less Than 10');
+  }else if(str.length>10){
+    print('Length of str is Grater Than 10');
+  }
+  else{
+    print('String is not found');
+  }
+}
+
+void questionNine(int temp){
+
+  if(temp==0){
+    print('The Given Temperature is freezing point');
+  }
+  else if(temp<0){
+    print('The Given Temperature is Below freezing point ');
+  }
+  else if(temp>0){
+    print('The Given Temperature is Above freezing point ');
+  }
+  else{
+    print('invalid Input!!!!!');
+  }
+}
+
+void questionTen(int time){
+
+  if(time>=5 && time<12){
+    print('Morning');
+  }
+  else if(time>=12 && time<17){
+    print('Afternoon');
+  }
+  else if(time>=17 && time<21){
+    print('Evening');
+  }
+  else if(time>=21 && time<24){
+    print('Night');
+  }
+
+  else if(time>=0 && time<5){
+    print('Night');
+  }
+
+  else{
+    print('Invalid Input');
+  }
+}
+
