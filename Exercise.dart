@@ -1,11 +1,13 @@
 import 'dart:async';
 import 'dart:io';
 
+
 void main(){
 //exOne();
 //exTwo();
 //exthree();
-exFour();
+//exFour();
+exFive();
 
 }
 
@@ -73,7 +75,7 @@ void exthree(){
 
 }
 
-//Exercise 3
+//Exercise 4
 
 void exFour(){
 
@@ -90,5 +92,26 @@ void exFour(){
   }
   print('Divisor List of $number = $divisorList');
 
+
+}
+
+//Exercise 5
+
+void exFive(){
+
+  List <int> lOne=[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+  List <int> lTwo=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+  Set <int> commomElements={};
+
+  for(int i in lOne){
+    for(int j in lTwo){
+      if(i==j){
+        commomElements.add(i);
+      }
+    }
+  }
+  print('List One = $lOne');
+  print('List Two = $lTwo');
+  print('List of Common Elements = ${commomElements.toList()}');
 
 }
