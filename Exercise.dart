@@ -7,7 +7,8 @@ void main(){
 //exTwo();
 //exthree();
 //exFour();
-exFive();
+//exFive();
+exSix();
 
 }
 
@@ -115,3 +116,22 @@ void exFive(){
   print('List of Common Elements = ${commomElements.toList()}');
 
 }
+
+//Exercise 6
+
+void exSix(){
+  String input;
+  print('input: ');
+  input=stdin.readLineSync()!.toLowerCase();
+  
+  String reverseInput = input.split('').reversed.join('');
+  
+  if(input==reverseInput){
+    print('The word is palindrome');
+  }  
+  else
+    {
+      print('The word is not a palindrome');
+    }
+}
+
