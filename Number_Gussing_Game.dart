@@ -13,7 +13,12 @@ try {
     userChoice = int.parse(stdin.readLineSync()!);
     trytime++;
 
-    if(trytime==5 && userChoice!=number){
+
+  if(userChoice==0){
+     exit(0);
+  }
+
+    else if(trytime==5 && userChoice!=number){
       print('You tried too many Times \nBetter Luck for Next Time \nThe Number Was $number');
       break;
     }
