@@ -14,6 +14,7 @@ class Student{
      print('Name: $name');
      print('Institute: $institute');
      print('Address: $address');
+  print('');
 
     }
 
@@ -34,4 +35,20 @@ class Teacher extends Student{
     print('Institute: $institute');
     print('Address: $address');
     print('Sallary: $sallary');
+    print('');
   }}
+
+void main(){
+
+  Student stOne= Student(9050, 'Nurnabi Hasan', 'SU', 'Dhaka');
+  Student stTwo= Student(9056, 'Karim', 'SU', 'Dhaka');
+  stOne.display();
+  stTwo.display();
+
+  Teacher tOne=Teacher(605, 'Anis', 'Robust', 'Dhaka', 24000);
+  Teacher tTwo=Teacher(606, 'Saif', 'Robust', 'Dhaka', 22000);
+  tOne.display();
+  tTwo.display();
+
+
+}
