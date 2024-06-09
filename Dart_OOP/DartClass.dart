@@ -19,8 +19,8 @@ void display(){
     print('Model: $modelNumber');
     print('Display Size: $size');
     print('Price: $price');
+    print('Discount: $discount');
     if(discount>0){
-      print('Discount: $discount');
       print('Discount Amount: ${discountCalculate()}');
       print('Price After Discount: ${price-discountCalculate()}');
     }
@@ -40,9 +40,14 @@ double discountCalculate(){
 
 }
 
+}
 
-
-
-
+void main(){
+  Laptop lOne= Laptop('Acer', 'Espire E-5', 15.6, 45000, 10);
+  Laptop lTwo = Laptop('HP', '600 G4', 14, 30000, 50);
+  Laptop lThree = Laptop('Asus', 'zphyrus Duo', 15, 150000);
+  lOne.display();
+  lTwo.display();
+  lThree.display();
 
 }
