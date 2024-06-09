@@ -6,8 +6,10 @@ void main(){
   //Generate Random Number
   int number, fixedLengthNumber, rangeNumber;
 
+
   number = random.nextInt(100)+1; // Add 1 for number generate from 1 instead of 0
   print(number);
+
 
   //Generate fixed Length random Number
 

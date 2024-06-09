@@ -8,7 +8,10 @@ void main(){
 //exthree();
 //exFour();
 //exFive();
-exSix();
+//exSix();
+
+
+
 
 }
 
