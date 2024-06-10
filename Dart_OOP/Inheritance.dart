@@ -36,7 +36,8 @@ class Teacher extends Student{
     print('Address: $address');
     print('Sallary: $sallary');
     print('');
-  }}
+  }
+}
 
 void main(){
 
