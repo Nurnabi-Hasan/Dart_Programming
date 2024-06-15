@@ -1,14 +1,14 @@
 //Create a Class Named Car
 class Car{
 //class properties
-  late String brand, model;
-  late int year;
-  double milesDriven=0.0;
+  String brand, model;
+  int year;
+  double milesDriven;
 // Static Properties
-  static int numberOfCars =0;
+  static int numberOfCars=0;
 
   //Constructor
-  Car(this.brand, this.model, this.year, this.milesDriven){
+  Car(this.brand, this.model, this.year, [this.milesDriven=0.0]){
     numberOfCars++;
 }
 
@@ -42,16 +42,16 @@ void drive(double miles){
 
 void main(){
 
-Car car1 = Car('Honda', 'C-RV', 2016, 1060.0);
-car1.drive(220.50);
+Car car1 = Car('Honda', 'C-RV', 2016);
+car1.drive(560.50);
 
-Car car2 = Car('BMW', 'BMW iX3', 2018, 299.40);
-car2.drive(360.50);
+Car car2 = Car('BMW', 'BMW iX3', 2018);
+car2.drive(6050.30);
 
-Car car3= Car('Ford', 'Ford Mustang', 2020, 730.90);
-car3.drive(290.80);
+Car car3= Car('Ford', 'Ford Mustang', 2020);
+car3.drive(3056.20);
 
-//crwate a list for car objects
+//create a list for car objects
 List <Car> carList=[car1,car2,car3];
 
 //using for loop for the print all the car information
@@ -65,7 +65,5 @@ for(int i=0; i<carList.length; i++){
  print('');
 }
 print('Total Number of Car objects created: ${Car.numberOfCars}');
-
-
 
 }
