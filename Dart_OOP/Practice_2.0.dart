@@ -48,18 +48,29 @@ class Mi extends Mobile{
   }
 
 }
+class Realme extends Mobile{
+  Realme(super.model, super.cpu, super.ram, super.rom, super.price, [super.brandName='Realme']);
+}
+
+class Apple extends Mobile{
+
+  Apple(super.model, super.cpu, super.ram, super.rom, super.price, [super.brandName = 'Iphone']);
+}
 
 void main(){
 
   Samsung S21 =Samsung('S21 Pro', 'Snapdragon 8 gen +', 12, 256, 90000, 'Yes');
 
-  S21.Display();
-
   Mi mi12 =Mi('Mi Mix 40', 'SD860', 12, 256, 100000, 'Yes Available');
 
+  Realme realme8 = Realme('Realme 8', 'Mediatek', 8, 128, 23000);
 
+  Apple iphone15 =Apple('15 pro', 'Bionic A1', 12, 256, 156000);
 
-  mi12.Display();
+  List<Mobile> mymobile=[S21, mi12, realme8, iphone15];
+  for(int i =0; i<mymobile.length; i++){
+    mymobile[i].Display();
+  }
 
 
 
