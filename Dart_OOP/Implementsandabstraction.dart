@@ -9,8 +9,6 @@ abstract class Animal {
  void display(){
 
  }
-
-
 }
 
 class Lion implements Animal{
@@ -74,10 +72,7 @@ class deer implements Animal{
     run();
     afraid();
   }
-
 }
-
-
 
 void main(){
 
