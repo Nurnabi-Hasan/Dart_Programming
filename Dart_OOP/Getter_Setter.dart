@@ -16,7 +16,7 @@ class Employee {
 
 // using get and set Keyword
 
-void set setSalary(double newSalary){
+set setSalary(double newSalary){
    _salary +=newSalary;
 }
 

@@ -1,8 +1,10 @@
 import 'Getter_Setter.dart';
 
+
+
 void main(){
 
-   For getter Setter Method
+  // For getter Setter Method
 
   Employee nur = Employee();
 
@@ -13,7 +15,7 @@ void main(){
 //  print(nur.getSalary());
 
 //set value using keyword
-  nur.setSalary=6000;
+  nur.setSalary=300;
 
   //get value without keyword
   print(nur.getSalary);
